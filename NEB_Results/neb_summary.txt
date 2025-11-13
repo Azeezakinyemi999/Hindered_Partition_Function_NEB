@@ -1,0 +1,204 @@
+================================================================================
+
+NEB Calculation ResultsTimestamp: 2025-11-12 16:20:07
+
+================================================================================
+
+Barrier Type: TRANSLATION
+--------------------------------------------------------------------------------
+
+
+Main Results:
+  
+Forward Barrier:        0.002711 eV
+
+                          2.711 meV
+
+                          0.262 kJ/mol
+
+  
+Reaction Energy (ΔE):   -0.001524 eV
+
+                          -1.524 meV
+
+  
+TS Absolute Energy:     -161.480600 eV
+
+
+Calculation Details:
+
+  Number of images:       12
+
+  Saddle point index:     7
+
+  Calculator:             FAIRChem
+
+
+Output Files:
+
+  Trajectory:             NEB_Results/neb_translation.traj
+
+  Saddle point:           NEB_Results/saddle_translation.traj
+
+
+For Hill's Hindered Translator/Rotor:
+
+W_x (translation barrier) = 0.002711 eV
+
+                            = 2.711 meV
+
+
+================================================================================
+
+
+================================================================================
+
+NEB Calculation Results
+
+Timestamp: 2025-11-12 16:30:50
+
+================================================================================
+
+
+Barrier Type: ROTATION
+
+--------------------------------------------------------------------------------
+
+
+Main Results:
+
+  Forward Barrier:        0.000619 eV
+
+                          0.619 meV
+
+                          0.060 kJ/mol
+
+  
+Reaction Energy (ΔE):   0.000328 eV
+
+                        0.328 meV
+
+
+TS Absolute Energy:     -161.483104 eV
+
+
+Calculation Details:
+
+Number of images:       12
+  
+Saddle point index:     9
+
+Calculator:             FAIRChem
+
+
+Output Files:
+
+  Trajectory:             NEB_Results/neb_rotation.traj
+
+  Saddle point:           NEB_Results/saddle_rotation.traj
+
+
+For Hill's Hindered Translator/Rotor:
+
+  W_r (rotation barrier)    = 0.000619 eV
+
+                            = 0.619 meV
+
+
+================================================================================
+Setting up calculators for NEB...
+/projects/westgroup/lekia.p/fairchem/src/fairchem/core/models/uma/escn_md.py:130: FutureWarning: You are using `torch.load` with `weights_only=False` (the current default value), which uses the default pickle module implicitly. It is possible to construct malicious pickle data which will execute arbitrary code during unpickling (See https://github.com/pytorch/pytorch/blob/main/SECURITY.md#untrusted-models for more details). In a future release, the default value for `weights_only` will be flipped to `True`. This limits the functions that could be executed during unpickling. Arbitrary objects will no longer be allowed to be loaded via this mode unless they are explicitly allowlisted by the user via `torch.serialization.add_safe_globals`. We recommend you start setting `weights_only=True` for any use case where you don't have full control of the loaded file. Please open an issue on GitHub for any issues related to this experimental feature.
+/projects/westgroup/lekia.p/miniforge3/envs/pynta_fairchem/lib/python3.9/site-packages/torch/utils/checkpoint.py:1399: FutureWarning: `torch.cpu.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cpu', args...)` instead.
+Initial structure energy: -161.483311 eV
+Final structure energy: -161.484835 eV
+Created 12 images (including 2 endpoints)
+Assigning individual calculators to intermediate images...
+/projects/westgroup/lekia.p/fairchem/src/fairchem/core/models/uma/escn_md.py:130: FutureWarning: You are using `torch.load` with `weights_only=False` (the current default value), which uses the default pickle module implicitly. It is possible to construct malicious pickle data which will execute arbitrary code during unpickling (See https://github.com/pytorch/pytorch/blob/main/SECURITY.md#untrusted-models for more details). In a future release, the default value for `weights_only` will be flipped to `True`. This limits the functions that could be executed during unpickling. Arbitrary objects will no longer be allowed to be loaded via this mode unless they are explicitly allowlisted by the user via `torch.serialization.add_safe_globals`. We recommend you start setting `weights_only=True` for any use case where you don't have full control of the loaded file. Please open an issue on GitHub for any issues related to this experimental feature.
+  Assigned calculator to image 2/10
+  Assigned calculator to image 4/10
+  Assigned calculator to image 6/10
+  Assigned calculator to image 8/10
+  Assigned calculator to image 10/10
+✓ All 12 images have separate calculator instances
+
+Starting NEB optimization...
+  Trajectory: NEB_Results/neb_translation.traj
+  Log file: NEB_Results/neb_translation.log
+/projects/westgroup/lekia.p/miniforge3/envs/pynta_fairchem/lib/python3.9/site-packages/torch/utils/checkpoint.py:1399: FutureWarning: `torch.cpu.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cpu', args...)` instead.
+
+✓ NEB optimization completed!
+
+Calculating barriers...
+  Forward barrier (fitted): 0.002711 eV (2.711 meV)
+  Reaction energy (ΔE): -0.001524 eV
+  TS absolute energy: -161.480600 eV
+Appears to be only one band in the images.
+Processing band          0 /          1
+
+Saddle point: image 7/11
+Saddle point saved: NEB_Results/saddle_translation.traj
+
+Trajectory saved: NEB_Results/neb_translation.traj
+\n✓ NEB summary appended to: NEB_Results/neb_summary.txt
+{'barrier_type': 'translation', 'forward_barrier_fit': 0.002711328973696664, 'delta_E': -0.0015239715576171875, 'transition_state_energy': -161.48059993786313, 'trajectory': 'NEB_Results/neb_translation.traj', 'saddle_file': 'NEB_Results/saddle_translation.traj', 'saddle_index': 7, 'n_images': 12}
+
+======================================================================
+Selecting Rotation NEB Endpoints from Screening
+======================================================================
+Target site type: bridge
+Target height: 3.000 Å
+Target position: (4.211, 0.000)
+
+Found 12 structures at same position with different rotations:
+
+Available rotation angles: [0, 30, 60, 90, 120, 150, 180, 210, 240, 270, 300, 330]
+
+Selected rotation angles:
+  Initial: 0.0°
+  Final:   120.0°
+  Angle difference: 120.0° (target was 120°)
+
+Endpoint energies:
+  0.0° rotation: -161.483723 eV
+  120.0° rotation: -161.483395 eV
+  Energy difference: 0.000328 eV (0.328 meV)
+
+✓ GOOD: Significant energy difference found
+✓ PURE ROTATION confirmed (same position, different angles)
+======================================================================
+✓ Constraint verification passed: 18 atoms fixed
+
+Setting up calculators for NEB...
+/projects/westgroup/lekia.p/fairchem/src/fairchem/core/models/uma/escn_md.py:130: FutureWarning: You are using `torch.load` with `weights_only=False` (the current default value), which uses the default pickle module implicitly. It is possible to construct malicious pickle data which will execute arbitrary code during unpickling (See https://github.com/pytorch/pytorch/blob/main/SECURITY.md#untrusted-models for more details). In a future release, the default value for `weights_only` will be flipped to `True`. This limits the functions that could be executed during unpickling. Arbitrary objects will no longer be allowed to be loaded via this mode unless they are explicitly allowlisted by the user via `torch.serialization.add_safe_globals`. We recommend you start setting `weights_only=True` for any use case where you don't have full control of the loaded file. Please open an issue on GitHub for any issues related to this experimental feature.
+/projects/westgroup/lekia.p/miniforge3/envs/pynta_fairchem/lib/python3.9/site-packages/torch/utils/checkpoint.py:1399: FutureWarning: `torch.cpu.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cpu', args...)` instead.
+Initial structure energy: -161.483723 eV
+Final structure energy: -161.483395 eV
+Created 12 images (including 2 endpoints)
+Assigning individual calculators to intermediate images...
+  Assigned calculator to image 2/10
+  Assigned calculator to image 4/10
+  Assigned calculator to image 6/10
+  Assigned calculator to image 8/10
+  Assigned calculator to image 10/10
+✓ All 12 images have separate calculator instances
+
+Starting NEB optimization...
+  Trajectory: NEB_Results/neb_rotation.traj
+  Log file: NEB_Results/neb_rotation.log
+
+✓ NEB optimization completed!
+
+Calculating barriers...
+  Forward barrier (fitted): 0.000619 eV (0.619 meV)
+  Reaction energy (ΔE): 0.000328 eV
+  TS absolute energy: -161.483104 eV
+Appears to be only one band in the images.
+Processing band          0 /          1
+
+Saddle point: image 9/11
+Saddle point saved: NEB_Results/saddle_rotation.traj
+
+Trajectory saved: NEB_Results/neb_rotation.traj
+\n✓ NEB summary appended to: NEB_Results/neb_summary.txt
+{'barrier_type': 'rotation', 'forward_barrier_fit': 0.0006192783946627149, 'delta_E': 0.00032806396484375, 'transition_state_energy': -161.48310397574687, 'trajectory': 'NEB_Results/neb_rotation.traj', 'saddle_file': 'NEB_Results/saddle_rotation.traj', 'saddle_index': 9, 'n_images': 12}
+(pynta_fairchem) [lekia.p@c3047 NEB]$ 
